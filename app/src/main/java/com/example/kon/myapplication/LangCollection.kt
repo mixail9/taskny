@@ -33,13 +33,6 @@ class LangCollection(val ctx: Context) {
                 year = 1985
         ))
         listLang.add(LangItem(
-                name = "C++",
-                logo = BitmapFactory.decodeResource(ctx.resources, R.drawable.vbnet),
-                site = "https://docs.microsoft.com/dotnet/visual-basic/",
-                author = "Microsoft",
-                year = 2001
-        ))
-        listLang.add(LangItem(
                 name = "Visual Basic.NET",
                 logo = BitmapFactory.decodeResource(ctx.resources, R.drawable.vbnet),
                 site = "https://isocpp.org/",
@@ -64,7 +57,7 @@ class LangCollection(val ctx: Context) {
         ))
         listLang.add(LangItem(
                 name = "PHP",
-                logo = BitmapFactory.decodeResource(ctx.resources, R.drawable.java),
+                logo = BitmapFactory.decodeResource(ctx.resources, R.drawable.php),
                 site = "https://secure.php.net/",
                 author = "Rasmus Lerdorf",
                 year = 1995,

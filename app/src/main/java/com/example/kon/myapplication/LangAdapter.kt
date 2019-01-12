@@ -28,7 +28,7 @@ class LangAdapter(val dataSet: ArrayList<LangItem>, val context: Context, val on
             holder.viewItem.findViewById<TextView>(R.id.author).text = author
             holder.viewItem.findViewById<TextView>(R.id.year).text = year.toString()
             holder.viewItem.findViewById<TextView>(R.id.paradigm).text = paradigm
-            holder.viewItem.findViewById<TextView>(R.id.site).text = site
+            holder.viewItem.findViewById<ImageView>(R.id.logo).setImageBitmap(logo);
         }
 
         holder.viewItem.setOnClickListener { onItemClick(position) }
