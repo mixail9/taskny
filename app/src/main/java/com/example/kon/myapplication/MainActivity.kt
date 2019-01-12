@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.MotionEvent
 import android.widget.AdapterView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,10 +28,17 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-        val recyclerView = findViewById<RecyclerView>(R.id.langList).apply {
-            setHasFixedSize(true)
+        findViewById<RecyclerView>(R.id.langList).apply {
+            setHasFixedSize(false)
             layoutManager = viewManager
             adapter = viewAdapter
+        }
+
+
+        buttonFilter.setOnClickListener{
+            //viewAdapter.dataSet = ArrayList(LangCollection(this).getList().filter { it.paradigm.indexOf(textFilter.text.toString()) >= 0 })
+            viewAdapter.getFilter().filter(textFilter.text.toString())
+            Log.d("qq", "click " + textFilter.text.toString())
         }
 
     }
